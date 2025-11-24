@@ -56,7 +56,9 @@ int main() {
 
     // ==== Cálculos da Carta 1 ====
     densidade1 = (float)populacao1 / area1;
-    pibPerCapita1 = pib1 / (float)populacao1;
+
+    // PIB per capita REAL (PIB em bilhões → reais)
+    pibPerCapita1 = (pib1 * 1000000000.0f) / (float)populacao1;
 
     superPoder1 = (float)populacao1 + area1 + pib1 +
                   (float)pontosTuristicos1 + pibPerCapita1 +
@@ -90,7 +92,9 @@ int main() {
 
     // ==== Cálculos da Carta 2 ====
     densidade2 = (float)populacao2 / area2;
-    pibPerCapita2 = pib2 / (float)populacao2;
+
+    // PIB per capita REAL
+    pibPerCapita2 = (pib2 * 1000000000.0f) / (float)populacao2;
 
     superPoder2 = (float)populacao2 + area2 + pib2 +
                   (float)pontosTuristicos2 + pibPerCapita2 +
@@ -106,10 +110,10 @@ int main() {
     printf("Cidade: %s\n", nomeCidade1);
     printf("Populacao: %lu\n", populacao1);
     printf("Area: %.2f\n", area1);
-    printf("PIB: %.2f\n", pib1);
+    printf("PIB: %.2f bilhoes\n", pib1);
     printf("Pontos Turisticos: %d\n", pontosTuristicos1);
-    printf("Densidade: %.2f\n", densidade1);
-    printf("PIB per Capita: %.6f\n", pibPerCapita1);
+    printf("Densidade: %.2f hab/km2\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
     printf("Super Poder: %.2f\n", superPoder1);
 
     printf("\n=== DADOS DA CARTA 2 ===\n");
@@ -118,10 +122,10 @@ int main() {
     printf("Cidade: %s\n", nomeCidade2);
     printf("Populacao: %lu\n", populacao2);
     printf("Area: %.2f\n", area2);
-    printf("PIB: %.2f\n", pib2);
+    printf("PIB: %.2f bilhoes\n", pib2);
     printf("Pontos Turisticos: %d\n", pontosTuristicos2);
-    printf("Densidade: %.2f\n", densidade2);
-    printf("PIB per Capita: %.6f\n", pibPerCapita2);
+    printf("Densidade: %.2f hab/km2\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
     printf("Super Poder: %.2f\n", superPoder2);
 
     // =====================================================================
